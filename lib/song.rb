@@ -33,6 +33,7 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
+<<<<<<< HEAD
     
     if  self.find_by_name(name)
       self.find_by_name(name)
@@ -71,6 +72,20 @@ class Song
     
   end
   
+=======
+    method1= self.find_by_name
+    method2= self.create_by_name
+    
+    if  self.all.find{|song| song.name == name}
+      method1
+    else
+     method2
+    end
+  end
+  def self.alphabetical
+    @@all.sort_by{|wprd| word.name}
+  end
+>>>>>>> b5e8fdd1da0524849d71e21495cfd95489f0ce23
   def self.destroy_all
     @@all.clear
   end
